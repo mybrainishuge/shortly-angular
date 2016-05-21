@@ -7,7 +7,7 @@ angular.module('shortly.services', [])
       method: 'GET',
       url: '/api/links'
     })
-    .then( (resp) => resp.data);
+    .then(resp => resp.data);
   };
 
   var addOne = (link) => {
