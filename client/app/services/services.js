@@ -1,6 +1,43 @@
 angular.module('shortly.services', [])
 
 .factory('Links', function ($http) {
+
+  var getAll = () => {
+    return $http({
+      method: 'GET',
+      url: '/api/links'
+    })
+    .then( (resp) => {
+      //eventually we will need to return the response 
+
+      // console.log('this is data', resp);
+      return resp.data;
+    }, (err) => {
+      console.log('error!!!:', err);
+    });
+  };
+
+  var addOne = (link) => {
+    return $http({
+      method: 'POST',
+      url: '/api/links',
+      data: link
+    })
+    .then( (resp) => {
+      console.log('success', resp.statusCode);
+      return resp.status;
+    }, 
+    (err) => {
+      console.log('fail', err);
+    });
+  };
+
+  return {
+    getAll: getAll,
+    addOne: addOne
+  };
+  //this might count links for us?
+  //
   // Your code here
 })
 .factory('Auth', function ($http, $location, $window) {
