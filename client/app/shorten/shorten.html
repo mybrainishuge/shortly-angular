@@ -8,12 +8,24 @@
     </ul>
   </div>
 
-  <form ng-submit='addLink(link.url)'>
-      <input class='text' type='text' name='url' ng-model='link.url'>
+  <form ng-submit="sub(formInput)">
+      <input class='text' type='text' name='url' ng-model='formInput'>
       <input type='submit' value='Shorten'>
   </form>
-  <img class='spinner' src='../assets/spiffygif_46x46.gif'>
+  <img class='spinner' ng-show="spin" src='../assets/spiffygif_46x46.gif'>
   <div class='message'></div>
+
+  <div class="links" ng-show="showLink">
+    <div class="link">
+      <img src='../assets/redirect_icon.png'/>
+      <div class='info'>
+        <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
+        <div class='title'>{{link.title}}</div>
+        <div class='original'>{{link.url}}</div>
+        <a href='{{link.baseUrl}}/{{link.code}}'>{{link.baseUrl}}/{{link.code}}</a>
+      </div>
+    </div>
+  </div>
 
 </div>
 
