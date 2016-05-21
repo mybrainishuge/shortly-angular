@@ -23,22 +23,13 @@ angular.module('shortly.services', [])
       url: '/api/links',
       data: link
     })
-    .then( (resp) => {
-      console.log('success', resp.statusCode);
-      return resp.status;
-    }, 
-    (err) => {
-      console.log('fail', err);
-    });
+    .then( resp => resp);
   };
 
   return {
     getAll: getAll,
     addOne: addOne
   };
-  //this might count links for us?
-  //
-  // Your code here
 })
 .factory('Auth', function ($http, $location, $window) {
   // Don't touch this Auth service!!!
