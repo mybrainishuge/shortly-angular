@@ -20,10 +20,10 @@ module.exports = function (config) {
       'client/app/**/*.js',
 
       // our spec files - in order of the README
-      // 'specs/client/authControllerSpec.js',
-      // 'specs/client/servicesSpec.js',
-      // 'specs/client/linksControllerSpec.js',
-      // 'specs/client/shortenControllerSpec.js',
+      'specs/client/authControllerSpec.js',
+      'specs/client/servicesSpec.js',
+      'specs/client/linksControllerSpec.js',
+      'specs/client/shortenControllerSpec.js',
       'specs/client/routingSpec.js'
     ],
 
