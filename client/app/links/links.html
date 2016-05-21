@@ -1,6 +1,11 @@
-<div id='container' ng-controller="LinksController">
-  <!-- Your html here -->
-  <table>
-    <tr ng-repeat='link in data.links'>{{link}}</tr>
-  </table>
+<div id='container' ng-controller='LinksController'>
+<!-- Your code here -->
+ <div class='navigation'>
+    <ul>
+      <li><a href='#/links' class='index'>All Links</a></li>
+      <li><a href='#/shorten' class='create'>Shorten</a></li>
+      <li><a href='#/signin' class='logout'>Logout</a></li>
+    </ul>
+  </div>
+
 </div>
