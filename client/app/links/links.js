@@ -1,7 +1,7 @@
 angular.module('shortly.links', [])
 
 .controller('LinksController', function ($scope, Links, Auth) {
- if(!Auth.isAuth()) {
+  if (!Auth.isAuth()) {
     Auth.signout();
 
   }
