@@ -6,6 +6,18 @@ angular.module('shortly.auth', [])
 .controller('AuthController', function ($scope, $window, $location, Auth) {
   $scope.user = {};
   
+  $scope.formValidate = (isValid, pth) => {
+    if (isValid) {
+      if (pth === 'signin') {
+        $scope.signin();
+      } else if (pth === 'signup') {
+        $scope.signup();
+      }
+    } else {
+      alert('Please enter a valid username and password');      
+    }
+  };
+
   $scope.signin = function () {
     Auth.signin($scope.user)
       .then(function (token) {

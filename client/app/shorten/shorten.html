@@ -15,6 +15,11 @@
   <img class='spinner' ng-show="spin" src='../assets/spiffygif_46x46.gif'>
   <div class='message'></div>
 
+  <div class ="message error" ng-show="showError">
+    {{errMsg}}
+  </div>
+
+
   <div class="links" ng-show="showLink">
     <div class="link">
       <img src='../assets/redirect_icon.png'/>

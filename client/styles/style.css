@@ -48,8 +48,22 @@ h1 {
   background-color: #ccc;
 }
 
-.navigation li .logout {
+
+navigation a, .logout {
+  height: 20px;
+  width: 100px;
+  line-height: 20px;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
   float: right;
+}
+.link-search {
+  float: right;
+  display: block;
+  height: 30px;
+  margin: 5px;
+  border-radius: 10px;
 }
 
 #container {

@@ -4,12 +4,13 @@
     <ul>
       <li><a href='#/links' class='index'>All Links</a></li>
       <li><a href='#/shorten' class='create'>Shorten</a></li>
-      <li><a href='#/signin' class='logout' ng-click='signOut()'>Logout</a></li>
+      <li><a href='#/signin' id="logout" class='logout' ng-click='signOut()'>Logout</a></li>
     </ul>
+      <input type='search' ng-model='q' class="link-search" placeholder="filter links">
   </div>
 
   <div class="links">
-    <div class="link" ng-repeat='link in data.links'>
+    <div class="link" ng-repeat="link in data.links | orderBy: '-visits' | filter:q as results ">
       <img src='../assets/redirect_icon.png'/>
       <div class='info'>
         <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>

@@ -3,7 +3,7 @@ angular.module('shortly', [
   'shortly.links',
   'shortly.shorten',
   'shortly.auth',
-  'ngRoute'
+  'ngRoute',
 ])
 .config(function ($routeProvider, $httpProvider) {
   $routeProvider
@@ -24,7 +24,7 @@ angular.module('shortly', [
       controller: 'LinksController'
     })
     .otherwise({
-      redirectTo: '/signin'
+      redirectTo: '/links'
     }
     );
 
