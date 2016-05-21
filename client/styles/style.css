@@ -48,6 +48,10 @@ h1 {
   background-color: #ccc;
 }
 
+.navigation li .logout {
+  float: right;
+}
+
 #container {
   clear: both;
   margin-top: 10px;
@@ -145,4 +149,5 @@ input[type=url]:focus {
 .creator .message {
   clear: both;
 }
+
 
