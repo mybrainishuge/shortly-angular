@@ -7,14 +7,7 @@ angular.module('shortly.services', [])
       method: 'GET',
       url: '/api/links'
     })
-    .then( (resp) => {
-      //eventually we will need to return the response 
-
-      // console.log('this is data', resp);
-      return resp.data;
-    }, (err) => {
-      console.log('error!!!:', err);
-    });
+    .then( (resp) => resp.data);
   };
 
   var addOne = (link) => {
@@ -23,7 +16,7 @@ angular.module('shortly.services', [])
       url: '/api/links',
       data: link
     })
-    .then( resp => resp);
+    .then(resp => resp);
   };
 
   return {
